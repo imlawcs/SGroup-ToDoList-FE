@@ -1,0 +1,215 @@
+.container {
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    width: 60%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    /* margin: 80px auto; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+}
+
+.img-container {
+    width: 47%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    border-radius: 15px;
+}
+
+.s-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    padding-bottom: 15px;
+    column-gap: 2px;
+}
+
+.login-button, .register-button {
+    width: 50%;
+    text-align: center;
+    position: relative;
+    /* padding: 8px; */
+    margin: 0;
+    background: none;
+    color: black;
+    font-size: 15px;
+}
+
+.login, .register, .login1, .register1 {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    padding: 8px;
+    margin: 0;
+    background: none;
+    color: black;
+    font-size: 15px;
+}
+
+.login:hover, .register:hover, .login1:hover, .register1:hover {
+    background: none;
+}
+
+.register::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background: #0a89a8;
+    animation: fadeInLeft 0.4s;
+    animation-delay: 0;
+    animation-timing-function: ease;
+    animation-fill-mode: backwards;
+}
+
+.register1::before, .login::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 3px;
+    width: 0;
+    background: #0a89a8;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    transition-property: width;
+}
+
+/* .register1::before {
+    left: 0;
+}
+
+.login::before {
+    right: 0;
+}
+
+.register-button:hover .register1::before {
+    width: 100%;
+} 
+
+.login-button:hover .login::before {
+    width: 100%;
+} */
+
+.login1::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background: #0a89a8;
+    animation: fadeInRight 0.4s;
+    animation-delay: 0;
+    animation-timing-function: ease;
+}
+
+.content-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 53%;
+}
+
+.content {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+}
+
+.input {
+    padding-top: 15px;
+    width: 100%;
+}
+
+.logout-container {
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    max-width: fit-content;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin: 80px auto;
+    border-radius: 15px;
+    animation-delay: 0s;
+    animation-name: fadeInDown;
+    animation-duration: 1s;
+}
+
+.logout-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.header-content, .header-content h2 {
+    margin: 0;
+    width: 100%;
+}
+
+img {
+    /* width: 100px;
+    height: 100px; */
+}
+
+button {
+    border-radius: 25px;
+    padding: 15px 42px;
+    line-height: 1;
+    border: none;
+    background: #02b0db;
+    cursor: pointer;
+    font-size: 13px;
+    color: #fff;
+    letter-spacing: .5px;
+    transition: all 0.4s 0s;
+    margin-top: 15px;
+}
+
+button:hover {  
+    background: #564DCA;
+}
+
+/* input {
+    border: 1px solid rgba(210, 210, 210, 10);
+    border-radius: 2px;
+    width: 100%;
+    letter-spacing: -0.02em;
+    color: #1d1a1a;
+    font-size: 15px;
+    padding: 5px 10px;
+    line-height: 1.5;
+    margin-top: 10px;
+    box-sizing: border-box;
+} */
+
+input::placeholder {
+    color: #030b1549;
+}
+
+input:focus {
+    outline: 0;
+}
+
+* {
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+}

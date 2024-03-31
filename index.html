@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="https://scontent.fsgn2-3.fna.fbcdn.net/v/t39.30808-6/321998401_540730578207305_7283713536861378154_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeH7GR0GnV3s4pAvtEb1PP0VV88nLZnwKVVXzyctmfApVQlmsrtig1LlBfhZeJBrUVUOzvC5TjU5su2s2pPvxrU-&_nc_ohc=tk4oKJGTeJ0AX9FHgLL&_nc_ht=scontent.fsgn2-3.fna&oh=00_AfDUZFa0J85ainPL4E6ibIFONJx-v-KSwUmxEOPu69agpg&oe=6603709B">
+    <title>Register</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animation.css">
+</head>
+<body>
+    <div class="container">
+        <div class="img-container">
+            <div class="s-img">
+                <img src="Mask group.png" alt="SGroup">
+            </div>
+        </div>
+       
+        <div class="content-container">
+            <div class="content">
+                <div class="header">
+                    <div class="login-button">
+                        <button id="Login" class="login">Login</button>
+                    </div>
+                    <div class="register-button">
+                        <button id="Register" class="register">Register</button>
+                    </div>
+                </div>
+                
+                <div class="input">
+                    <span>Email</span>
+                    <br>
+                    <input id="username" type="text" placeholder="Enter your email">
+                    <span id="email_error"></span>
+                </div>
+        
+                <div class="input">
+                    <span>Password</span>
+                    <br>
+                    <input id="password" type="text" placeholder="Enter your password">
+                    <span id="password_error"></span>
+                </div>
+                <br>
+                <button type="submit" onclick="return validate();" id="Register-button">Register</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js">
+    
+    </script>
+</body>
+</html>
