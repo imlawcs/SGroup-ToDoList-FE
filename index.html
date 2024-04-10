@@ -4,49 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="https://scontent.fsgn2-3.fna.fbcdn.net/v/t39.30808-6/321998401_540730578207305_7283713536861378154_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeH7GR0GnV3s4pAvtEb1PP0VV88nLZnwKVVXzyctmfApVQlmsrtig1LlBfhZeJBrUVUOzvC5TjU5su2s2pPvxrU-&_nc_ohc=tk4oKJGTeJ0AX9FHgLL&_nc_ht=scontent.fsgn2-3.fna&oh=00_AfDUZFa0J85ainPL4E6ibIFONJx-v-KSwUmxEOPu69agpg&oe=6603709B">
-    <title>Register</title>
+    <title>Login</title>
 
+    <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="animation.css">
 </head>
 <body>
-    <div class="container">
-        <div class="img-container">
-            <div class="s-img">
-                <img src="Mask group.png" alt="SGroup">
+    <div class="login-container">
+        <img class="item1" src="./img/Group2.png" alt="">
+        <img class="item2" src="./img/Group 101395.png" alt="">
+        <img class="item3" src="./img/Dot.png" alt="">
+        <div class="container">
+            <div class="img-container">
+                <div class="s-img">
+                    <img class="background" src="./img/GroupBackground.png" alt="">
+                    <img class="item4" src="./img/Vector.png" alt="">
+                    <img class="item5" src="./img/Vector1.png" alt="">
+                    <img class="item6" src="./img/Logo.png" alt="">
+                    <div class="layoutLogin"></div>
+                </div>
             </div>
-        </div>
-       
-        <div class="content-container">
-            <div class="content">
-                <div class="header">
-                    <div class="login-button">
-                        <button id="Login" class="login">Login</button>
+           
+            <div class="content-container">
+                <div class="content">
+                    <div class="header">
+                        <div class="login-button">
+                            <button id="Login" class="login1">Login</button>
+                        </div>
+                        <div class="register-button">
+                            <button id="Register" class="register1">Register</button>
+                        </div>
                     </div>
-                    <div class="register-button">
-                        <button id="Register" class="register">Register</button>
+                    
+                    <div class="input">
+                        <span>Email</span>
+                        <br>
+                        <input id="username" type="text" placeholder="Enter your email">
+                        <p class="email_error"></p>
+                    </div>
+            
+                    <div class="password-input">
+                        <div class="input">
+                            <span>Password</span>
+                            <br>
+                            <input id="password" type="text" placeholder="Enter your password">
+                            <p class="password_error"></p>
+                        </div>
+                        <!-- <div class="eye">
+                            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yZ/r/je5FEJkU1_K.png" alt="">
+                        </div> -->
+                        </div>
+                        <div class="remember-me">
+                            <!-- <i class="fa-solid fa-square-check" style="color: #00a6da; margin: 4px;"></i> -->
+                            <input type="checkbox" style="color: #00a6da; margin: 0; margin-right: 5px;">
+                            <span>Remember me</span>
+                        </div>
+                        <button id="Login-button">Login</button>
                     </div>
                 </div>
-                
-                <div class="input">
-                    <span>Email</span>
-                    <br>
-                    <input id="username" type="text" placeholder="Enter your email">
-                    <span id="email_error"></span>
-                </div>
-        
-                <div class="input">
-                    <span>Password</span>
-                    <br>
-                    <input id="password" type="text" placeholder="Enter your password">
-                    <span id="password_error"></span>
-                </div>
-                <br>
-                <button type="submit" onclick="return validate();" id="Register-button">Register</button>
             </div>
         </div>
     </div>

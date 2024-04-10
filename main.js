@@ -1,126 +1,62 @@
-// Lấy giá trị của một input
-function getValue(id){
-    return document.getElementById(id).value.trim();
-}
-
-// Hiển thị lỗi
-function showError(key, mess){
-    document.getElementById(key + '_error').innerHTML = mess;
-}
-
-function validate()
-{
-    var flag = true;
-
-    //password
-    var password = getValue('password');
-    if (password == '' || password.length < 8){
-        flag = false;
-        showError('password', 'Vui lòng kiểm tra lại Password');
-    }
-    //email
-    var email = getValue('username');
-    var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    if (!mailformat.test(email)){
-        flag = false;
-         
-        showError('email', 'Vui lòng kiểm tra lại Email');
-    }
-     
-    return flag;
-}
-
-function register() {
-    const username = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
-
-    // if (username === "" || password === "") {
-    //     alert("Vui lòng nhập đủ tên người dùng và mật khẩu.");
-    // }
-    // else {
-        // var loginArray = new Array();
-        let loginArray = JSON.parse(localStorage.getItem('loginArray')) || [];
-        const loginInfo = { username, password };
-
-        var count = 0;
-        for (var i = 0; i < loginArray.length; i++){
-            if(username == loginArray[i].username && password == loginArray[i].password) count++;
-        }
-
-        if(count == 0) {
-            // Thêm thông tin đăng nhập vào mảng
-            loginArray.push(loginInfo);
-
-            // Lưu mảng vào local storage
-            localStorage.setItem('loginArray', JSON.stringify(loginArray));
-            alert('Đăng kí thành công!');
-            window.location.href = "index1.html";
-        }
-        else {
-            alert('Tài khoản đã tồn tại');
-            window.location.href = "index.html";
-        // }
-    }
-}
-
-// document.addEventListener("DOMContentLoaded", function() {
-//     document.getElementById("Register-button").addEventListener("click", register)
-// });
+var p1 = document.querySelector('.email_error');
+var p2 = document.querySelector('.password_error');
 
 function login() {
-    const username0 = document.getElementById("username").value;
-    const password0 = document.getElementById("password").value;
-    if (username0 === "" || password0 === "") {
-        alert("Vui lòng nhập đủ tên người dùng và mật khẩu.");
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+    let count = 0;
+    var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    if (!mailformat.test(username) || username == ""){
+        p1.innerText = 'Please check your username'
+        p1.classList.add('active')
+        count++;
     }
-    else {
-        let storedData = JSON.parse(localStorage.getItem('loginArray'))
-        
-        var count = 0;
-        for (var i = 0; i < storedData.length; i++){
-            if(username0 == storedData[i].username && password0 == storedData[i].password) count++;
-        }
+    else p1.classList.remove('active');
+    if (password == ""){
+        p2.innerText = 'Please enter your password'
+        p2.classList.add('active')
+        count++;
+    }
+    else p2.classList.remove('active');
     
-        if (count) {
-            alert('Đăng nhập thành công!');
-            // redirectToNewPage();
-            window.location.href = "logout.html"
-        } else {
-            alert('Tên đăng nhập hoặc mật khẩu không đúng!');
+        if (count == 0) {
+            fetch('https://recruitment-api.pyt1.stg.jmr.pl/login', {
+                method: 'POST', //GET
+                headers: { 'Content-Type': 'application/json'},
+                body: JSON.stringify({
+                    login: username,
+                    password: password
+                })
+            })
+                .then(response => {
+                    if (response.ok) {
+                        return response.json(); // Chuyển đổi phản hồi JSON thành đối tượng JavaScript
+                    } else {
+                        throw new Error('Network response was not ok');
+                    }
+                })
+                .then(data => {
+                    // Xử lý phản hồi thành công
+                    if (data.status === 'ok') {
+                        window.location.href = 'home.html';
+                    } else {
+                        p2.innerText = 'Your account and password are invalid'
+                        p2.classList.add('active')  
+                    }
+                })
+                .catch(error => {
+                    // Xử lý lỗi từ máy chủ
+                    console.error('Error:', error);
+                });
         }
     }
-}
 
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("Login-button").addEventListener("click", login)
 });
 
-function logout() {
-    window.location.href = "index1.html";
-}
-
-document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("Logout-button").addEventListener("click", logout)
-});
-
-function registerDisplay() {
-    // const register = document.getElementById("Register-button");
-    // const login = document.getElementById("Login-button");
-    // register.style.display = "block";
-    // login.style.display = "none";
-    window.location.href = "index.html";
-}
-
-document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("Register").addEventListener("click", registerDisplay)
-});
-
 function loginDisplay() {
-    // const register = document.getElementById("Register-button");
-    // const login = document.getElementById("Login-button");
-    // register.style.display = "none";
-    // login.style.display = "block";
-    window.location.href = "index1.html";
+    window.location.href = "index.html";
 }
 
 document.addEventListener("DOMContentLoaded", function() {
