@@ -225,7 +225,13 @@ newTask.addEventListener('click', function () {
 })
 
 newContainer.addEventListener('click', function () {
-    newContainer.classList.remove('active')
+    categoryInput.value = "";
+    titleInput.value = "";
+    contentInput.value = "";
+    categoryInput.classList.remove('error');
+    titleInput.classList.remove('error');
+    contentInput.classList.remove('error');
+    newContainer.classList.remove('active');
 })
 
 newContent.addEventListener('click', function (event) {
@@ -236,6 +242,12 @@ newContent.addEventListener('click', function (event) {
 var exitadd = document.querySelector('.exitadd');
 
 exitadd.addEventListener('click', function () {
+    categoryInput.value = "";
+    titleInput.value = "";
+    contentInput.value = "";
+    categoryInput.classList.remove('error');
+    titleInput.classList.remove('error');
+    contentInput.classList.remove('error');
     newContainer.classList.toggle('active', false);
 })
 
@@ -258,6 +270,9 @@ var checkBoxBlocked = document.querySelector('.checkBoxBlocked')
 var checkBoxTemp = document.querySelector('.checkBoxTodo');
 
 function onEdit(id, type) {
+    categoryEdit.classList.remove('error');
+    titleEdit.classList.remove('error');
+    contentEdit.classList.remove('error');
     idd = id;
     typee = type;
 
@@ -393,13 +408,17 @@ submitEdit.addEventListener('click', function () {
         editContainer.classList.toggle('active')
         render();
         location.reload(true);
-    }    
+    }  
 })
 
 //exit edit
 var exit = document.querySelector('.exit');
 
 exit.addEventListener('click', function () {
+    checkBoxTodo.checked = false;
+    checkBoxDoing.checked = false;
+    checkBoxCompleted.checked = false;
+    checkBoxBlocked.checked = false;
     editContainer.classList.toggle('active', false);
 })
 
