@@ -331,7 +331,7 @@ submitEdit.addEventListener('click', function () {
     else titleEdit.classList.remove('error');
     if (contentEdit.value == '') {
         check = false;
-        contentEdit.classList.add('error')
+        contentEdit.classList.add('error');
     }
     else contentEdit.classList.remove('error');
     if (check == true) { 
@@ -341,6 +341,7 @@ submitEdit.addEventListener('click', function () {
         array[idd].category = categoryEdit.value;
         array[idd].title = titleEdit.value;
         array[idd].content = contentEdit.value;
+        array[idd].time = getCurrentTime();
         var itemAdd = array[idd];
         array.splice(idd, 1);
 
@@ -467,7 +468,8 @@ function dragEnd() {
     item = {
         category: this.querySelector(".topic").textContent,
         title: this.querySelector(".task-header>p").textContent,
-        content: this.querySelector(".task p").textContent
+        content: this.querySelector(".task p").textContent,
+        time: this.querySelector(".task-time>span").textContent
     }
     if(parentElement.id == 1) {
         todos.push(item)
