@@ -1,0 +1,166 @@
+/* responsive */
+@media screen and (min-width: 769px) {
+    .container {
+        width: 815px;
+        height: 500px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .img-container {
+        width: 47%;
+        height: 100%;
+    }
+    .content-container {
+        width: 53%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 384px;
+        height: 972px;
+    }
+    .img-container {
+        width: 384px;
+        height: 486px;
+    }
+    .content-container {
+        width: 384px;
+        height: 486px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .container {
+        width: 384px;
+        height: 486px;
+    }
+    .img-container {
+        display: none;
+    }
+    .content-container {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* 
+@media (max-width:937px) {
+    .login{
+     width: 460.8px;
+     height: 1274.4px;
+     flex-direction: column;
+    }
+ }
+ @media (max-width:485px) {
+     .login{
+      width: 99vw;
+      height: 100%;
+      flex-direction: column;
+     }
+     #blue{
+         width: 99%;
+         position: absolute;
+         bottom: 0%;
+     }
+     #cam{
+         width: 99%;
+         position: absolute;
+         right: 0;
+     }
+     .sgroupimg{
+         width: 99%;
+     }
+     .listimg img{
+         width: 33%;
+         height: 106.2px;
+     }
+     .loginbody{
+         width: 99%;
+     }
+     .listimg{
+         width: 99%;
+ 
+     }
+  }
+
+@media screen and (max-width: 1055px)
+{
+    .container_body{
+        
+        justify-content: space-around;
+        
+    }
+}
+
+@media screen and (max-width: 830px)
+{
+    .container_body{
+        flex-direction: column;
+        align-items: center;
+    }
+    .container_body_element_todo, .container_body_element_blocked,.container_body_element_completed,.container_body_element_doing{
+        width: 100%;
+    }
+    .element_header,.element_line,.element_task,.element_task_item{
+        width: 100%;
+    }
+} */
+
+
+@media screen and (min-width: 1025px) {
+    .list-content {
+        height: 475px;
+        /* width: 1283px; */
+        width: 100%;
+    }
+    .list {
+        width: 283px;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .list-content {
+        height: 475px;
+        /* width: 1283px; */
+        width: 100%;
+        /* column-gap: 10%; */
+        justify-content: space-around;
+    }
+    .list {
+        width: 40%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .list-content {
+        height: 475px;
+        /* width: 1283px; */
+        width: 100%;
+        /* column-gap: 10%; */
+        justify-content: space-around;
+    }
+    .list {
+        width: 90%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .container {
+        width: 384px;
+        height: 486px;
+    }
+    .img-container {
+        display: none;
+    }
+    .content-container {
+        width: 100%;
+        height: 100%;
+    }
+}
+

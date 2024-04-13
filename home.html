@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="style_home.css">
-
+    
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
+    
     <!-- icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="style_home.css">
+    <link rel="stylesheet" href="responsive.css">
 </head>
 <body>
     <!-- <div class="home-container"> -->
@@ -69,29 +71,33 @@
                 <div class="list todo" style="border: none;">
                     <div class="item i1">
                         <p>Todo</p>
+                        <div class="count todo-count">0</div>
                     </div>
-                    <div class="containerItem containerItemTodo" style="border: none;"></div>
+                    <div class="containerItem containerItemTodo" id="1" style="border: none;"></div>
                 </div>
 
                 <div class="list doing" style="border: none;">
                     <div class="item i2">
                         <p>Doing</p>
+                        <div class="count doing-count">0</div>
                     </div>
-                    <div class="containerItem containerItemDoing" style="border: none;"></div>
+                    <div class="containerItem containerItemDoing" id="2" style="border: none;"></div>
                 </div>
 
                 <div class="list completed" style="border: none;">
                     <div class="item i3">
                         <p>Completed</p>
+                        <div class="count completed-count">0</div>
                     </div>
-                    <div class="containerItem containerItemCompleted" style="border: none;"></div>
+                    <div class="containerItem containerItemCompleted" id="3" style="border: none;"></div>
                 </div>
 
                 <div class="list blocked" style="border: none;">
                     <div class="item i4">
                         <p>Blocked</p>
+                        <div class="count blocked-count">0</div>
                     </div>
-                    <div class="containerItem containerItemBlocked" style="border: none;"></div>
+                    <div class="containerItem containerItemBlocked" id="4" style="border: none;"></div>
                 </div>
             </div>
         </div>

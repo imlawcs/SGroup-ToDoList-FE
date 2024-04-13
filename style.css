@@ -20,16 +20,20 @@ body {
     position: absolute;
     bottom: 0%;
     left: 0%;
-    width: 30%;
-    height: 70%;
+    /* width: 30%; */
+    width: 407px;
+    /* height: 70%; */
+    height: 457px;
 }
 
 .item2 {
     position: absolute;
     top: 0%;
     right: 0%;
-    width: 30%;
-    height: 70%;
+    /* width: 30%; */
+    width: 407px;
+    /* height: 70%; */
+    height: 457px;
 }
 
 .item3 {
@@ -40,9 +44,12 @@ body {
 
 .container {
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
-    width: 60%;
-    height: 500px;
+    /* width: 60%; */
+    /* width: 815px;
+    height: 500px; */
     display: flex;
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; */
     justify-content: center;
     background-color: rgb(255, 255, 255);
     /* margin: 80px auto; */
@@ -54,7 +61,8 @@ body {
 }
 
 .img-container {
-    width: 47%;
+    /* width: 47%;
+    height: 100%; */
     box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
     border-radius: 15px;
 }
@@ -213,7 +221,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 53%;
+    /* width: 53%; */
 }
 
 .content {
